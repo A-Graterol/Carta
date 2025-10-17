@@ -1,0 +1,117 @@
+/* Fondo general y tipografía */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to bottom right, #fff0f5, #fefcea);
+  color: #4b2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 1s ease;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5em;
+  margin-top: 10px;
+  color: #c94f7c;
+  text-align: center;
+  text-shadow: 1px 1px 2px #f8c1d8;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Cita especial */
+.cita {
+  background-color: #fffafc;
+  border-left: 5px solid #c94f7c;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 700px;
+  font-style: italic;
+  font-size: 1.1em;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  animation: fadeIn 2s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.cita:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.cita .voz {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #a84c6b;
+  font-style: normal;
+}
+
+/* Poema y carta */
+.poema {
+  background-color: #ffffffdd;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center;
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Fecha del poema */
+.fecha {
+  font-size: 0.95em;
+  color: #a87c7c;
+  margin-bottom: 12px;
+}
+
+/* Animación para el poema */
+@keyframes poemaAparece {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#poema-dia {
+  animation: poemaAparece 1.2s ease;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividad adicional */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .cita, .poema {
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  .fecha {
+    font-size: 0.85em;
+  }
+}
